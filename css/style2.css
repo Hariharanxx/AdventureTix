@@ -1,0 +1,92 @@
+/* Centering the Login Form */
+body {
+    background: #121212;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Login Container */
+.login-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.3);
+    width: 350px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Input Fields */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+/* Login Button */
+.login-btn {
+    background: gold;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 15px rgba(255, 215, 0, 0.6);
+}
+
+/* Register Link */
+.register-link {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.register-link a {
+    color: gold;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.register-link a:hover {
+    color: #ffcc00;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

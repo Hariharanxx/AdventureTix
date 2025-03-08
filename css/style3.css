@@ -1,0 +1,68 @@
+body {
+    background: linear-gradient(to right, #1e3c72, #2a5298); /* Royal Blue Gradient */
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
+
+.booking-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    width: 50%;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.booking-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+select, input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-top: 5px;
+}
+
+.book-btn {
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 18px;
+    background: gold;
+    border: none;
+    border-radius: 50px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.book-btn:hover {
+    background: #d4af37; /* Rich Gold Hover */
+    transform: scale(1.1);
+}
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}

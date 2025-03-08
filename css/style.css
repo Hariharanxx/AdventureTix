@@ -1,0 +1,137 @@
+/* Import New Grand Fonts */
+body {
+    font-family: 'Cinzel', serif;
+    margin: 0;
+    padding: 0;
+    background: #1a1a2e;
+    color: white;
+    text-align: center;
+}
+
+/* HEADER FIX */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(45deg, #000428, #004e92);
+    padding: 12px 25px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* NAVIGATION LINKS */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;  /* Add space between nav links */
+}
+
+nav a {
+    color: gold;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.3s ease-in-out;
+}
+
+/* FIX "GET STARTED" BUTTON */
+nav .btn.small-btn {
+    background: gold;
+    color: black;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;  /* Ensures text does not wrap */
+    min-width: 110px;  /* Ensures button is wide enough */
+    text-align: center;
+}
+
+/* HERO SECTION */
+.hero {
+    background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+    color: white;
+    height: 85vh; /* Reduced height to remove big gaps */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+/* GOLD BUTTON */
+.golden-btn {
+    background: linear-gradient(45deg, #FFD700, #FFAA00);
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0px 0px 10px rgba(255, 215, 0, 0.5);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect - Glow & Scale */
+.golden-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px rgba(255, 215, 0, 0.8);
+}
+
+
+/* RIDE CARD CONTAINER */
+.ride-container {
+    display: flex;
+    justify-content: center;  /* Centers all cards */
+    align-items: stretch;  /* Ensures all cards have the same height */
+    flex-wrap: wrap;  /* Makes sure it looks good on smaller screens */
+    gap: 20px;  /* Adds space between cards */
+}
+
+/* INDIVIDUAL RIDE CARD */
+.ride-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;  /* Ensures all cards have the same width */
+    height: 420px; /* Ensures all cards have the same height */
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* CARD HOVER EFFECT */
+.ride-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.4);
+}
+
+/* RIDE IMAGE */
+.ride-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Makes sure images are cropped correctly */
+    border-radius: 8px;
+}
+
+/* TITLE STYLING */
+.ride-card h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #FFD700;
+}
+
+/* DESCRIPTION STYLING */
+.ride-card p {
+    font-size: 14px;
+    color: #ddd;
+    margin-top: 10px;
+    padding: 0 10px;
+}
+
+/* FOOTER */
+footer {
+    background: #000428;
+    padding: 15px;
+}

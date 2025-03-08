@@ -1,0 +1,91 @@
+/* REGISTER PAGE */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(45deg, #000428, #004e92);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* CONTAINER */
+.register-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.3);
+    text-align: center;
+    width: 350px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* FORM INPUTS */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* REGISTER BUTTON */
+.register-btn {
+    background: gold;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* HOVER EFFECTS */
+.register-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 15px rgba(255, 215, 0, 0.6);
+}
+
+/* LOGIN LINK */
+.login-link {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: gold;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.login-link a:hover {
+    color: #ffcc00;
+}
+
+/* FADE-IN ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
