@@ -1,3 +1,49 @@
+<?php
+include 'config.php';
+
+if (isset($_POST['register'])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $password = $_POST['password'];
+    $confirmPassword = $_POST['confirm-password'];
+
+    // ✅ Check if passwords match
+    if ($password !== $confirmPassword) {
+        echo "<script>alert('Passwords do not match!');</script>";
+        exit();
+    }
+
+    // ✅ Secure password before storing
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+    // ✅ Check if email already exists
+    $stmt = $conn->prepare("SELECT * FROM users WHERE email = :email");
+    $stmt->execute(['email' => $email]);
+
+    if ($stmt->rowCount() > 0) {
+        echo "<script>alert('Email already registered! Try logging in.');</script>";
+    } else {
+        // ✅ Insert user into the database
+        $stmt = $conn->prepare("INSERT INTO users (name, email, phone, password) VALUES (:name, :email, :phone, :password)");
+        $insert = $stmt->execute([
+            'name' => $name,
+            'email' => $email,
+            'phone' => $phone,
+            'password' => $hashedPassword
+        ]);
+
+        if ($insert) {
+            echo "<script>window.location.href ='login.php';</script>";
+            exit();
+        } else {
+            die("Error: " . implode(" | ", $stmt->errorInfo())); // Show SQL error
+        }
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -46,11 +92,12 @@
           />
         </div>
 
-        <button type="submit" class="register-btn">Register</button>
+        <button type="submit" name="register" class="register-btn">Register</button>
+
       </form>
 
       <p class="login-link">
-        Already have an account? <a href="login.html">Login here</a>
+        Already have an account? <a href="login.php">Login here</a>
       </p>
     </div>
     <script src="script.js"></script>
