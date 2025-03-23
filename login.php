@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['email'] = $email;
         // Redirect to homepage or dashboard
-        header("Location: index.html");
+        header("Location: book_tickets.html");
         exit();
     } else {
         $error = "Invalid email or password!";
