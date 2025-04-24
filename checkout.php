@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-$appId = "TEST10578187173a3c7e3cd2b94a774c78187501";
-$secretKey = "cfsk_ma_test_5377185047201c2952890fb4d07fb73f_17c7ac9c";
+$appId = getenv("TEST10578187173a3c7e3cd2b94a774c78187501");
+$secretKey = getenv("cfsk_ma_test_5377185047201c2952890fb4d07fb73f_17c7ac9c");
 
 $ride = $_POST['ride_name'];
 $date = $_POST['date'];
