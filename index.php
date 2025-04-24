@@ -1,3 +1,8 @@
+<!-- filepath: c:\xampp\htdocs\AdventureTix\index.php -->
+<?php
+// Start session if needed for dynamic content
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,9 +21,9 @@
     <header>
       <h1>Adventure Kingdom</h1>
       <nav>
-        <a href="http://localhost/AdventureTix/login.php">Book Tickets</a>
-        <a href="contact.html">Contact</a>
-        <a href="http://localhost/AdventureTix/register.php" class="btn small-btn">Get Started</a>
+        <a href="login.php">Book Tickets</a>
+        <a href="contact.php">Contact</a>
+        <a href="register.php" class="btn small-btn">Get Started</a>
       </nav>
     </header>
 
@@ -28,9 +33,8 @@
       <p class="slide-up">
         An Unforgettable Journey of Fun, Thrill, and Excitement!
       </p>
-      <a href="http://localhost/AdventureTix/login.php" class="btn golden-btn">Grab Your Pass</a>
+      <a href="login.php" class="btn golden-btn">Grab Your Pass</a>
     </section>
-
 
     <!-- ABOUT SECTION -->
     <section class="about">
@@ -41,27 +45,27 @@
         explorer, we have something for everyone!
       </p>
     </section>
-<!-- RIDE SECTION -->
-<section class="ride-container">
-    <div class="ride-card">
+
+    <!-- RIDE SECTION -->
+    <section class="ride-container">
+      <div class="ride-card">
         <img src="roller.jpg" alt="The Sky Fury">
         <h3>The Sky Fury</h3>
         <p>Feel the adrenaline rush with our fastest roller coaster yet!</p>
-    </div>
+      </div>
 
-    <div class="ride-card">
+      <div class="ride-card">
         <img src="ferriswheel2.jpg" alt="The Golden Wheel">
         <h3>The Golden Wheel</h3>
         <p>A breathtaking view from the top awaits you!</p>
-    </div>
+      </div>
 
-    <div class="ride-card">
+      <div class="ride-card">
         <img src="WaterSlide.jpg" alt="Storm Surge">
         <h3>Storm Surge</h3>
         <p>Dive into the wildest water adventure of your life!</p>
-    </div>
-</section>
-
+      </div>
+    </section>
 
     <!-- TESTIMONIALS -->
     <section class="testimonials">
@@ -75,7 +79,7 @@
 
     <!-- FOOTER -->
     <footer>
-      <p>&copy; 2025 Adventure Kingdom. All Rights Reserved.</p>
+      <p>&copy; <?php echo date("Y"); ?> Adventure Kingdom. All Rights Reserved.</p>
       <div class="social-icons">
         <a href="#">Facebook</a>
         <a href="#">Instagram</a>
