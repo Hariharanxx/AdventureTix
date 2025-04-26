@@ -69,7 +69,7 @@ $bookings = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <body>
 
 <div class="container">
-  <h2>Admin Dashboard</h2>
+  <h2>Bookings</h2>
 
   <?php if (count($bookings) > 0): ?>
     <table>

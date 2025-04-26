@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 26, 2025 at 01:37 PM
+-- Generation Time: Apr 26, 2025 at 02:42 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -84,7 +84,9 @@ CREATE TABLE `rides` (
 INSERT INTO `rides` (`id`, `name`, `price`, `description`, `image`) VALUES
 (6, 'The Sky Fury', 500.00, 'Feel the adrenaline rush with our fastest roller coaster yet!', 'roller.jpg'),
 (7, 'The Golden Wheel', 200.00, 'A breathtaking view from the top awaits you!', 'ferriswheel2.jpg'),
-(8, 'Storm Surge', 400.00, 'Dive into the wildest water adventure of your life!', 'WaterSlide.jpg');
+(8, 'Storm Surge', 400.00, 'Dive into the wildest water adventure of your life!', 'WaterSlide.jpg'),
+(10, 'Thunderbolt Express', 700.00, 'Experience the fastest roller coaster ever, with insane loops and heart-racing drops!', 'download (1).jpg'),
+(11, 'Aqua Twister', 600.00, 'Get drenched and twisted in our crazy water slide adventure! Perfect for thrill-seekers!', 'images.jpg');
 
 -- --------------------------------------------------------
 
@@ -157,7 +159,7 @@ ALTER TABLE `bookings`
 -- AUTO_INCREMENT for table `rides`
 --
 ALTER TABLE `rides`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `users`

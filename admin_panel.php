@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['admin'])) {
-  header("Location: admin_login.php");
+  header("Location: adminlog.php");
   exit();
 }
 ?>
@@ -21,7 +21,6 @@ if (!isset($_SESSION['admin'])) {
       height: 100vh;
       background: #f0f2f5;
     }
-
     header {
       position: fixed;
       width: 100%;
@@ -35,7 +34,6 @@ if (!isset($_SESSION['admin'])) {
       top: 0;
       z-index: 100;
     }
-
     .sidebar {
       width: 220px;
       background: #1a1a2e;
@@ -44,7 +42,6 @@ if (!isset($_SESSION['admin'])) {
       color: white;
       position: fixed;
     }
-
     .sidebar a {
       display: block;
       padding: 15px 25px;
@@ -52,19 +49,16 @@ if (!isset($_SESSION['admin'])) {
       text-decoration: none;
       transition: 0.3s;
     }
-
     .sidebar a:hover {
       background: #16213e;
       color: #fff;
     }
-
     .content {
       margin-left: 220px;
       margin-top: 60px;
       padding: 30px;
       width: 100%;
     }
-
     .card {
       background: white;
       padding: 25px;
@@ -72,7 +66,6 @@ if (!isset($_SESSION['admin'])) {
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
       margin-bottom: 20px;
     }
-
     iframe {
       width: 100%;
       height: 600px;
@@ -85,8 +78,9 @@ if (!isset($_SESSION['admin'])) {
 <header>Adventure Kingdom Admin Panel</header>
 
 <div class="sidebar">
-  <a href="admin_dashboard.php" target="adminContent">Dashboard</a>
+  <a href="dashboard.php" target="adminContent">Dashboard</a>
   <a href="view_users.php" target="adminContent">View Users</a>
+  <a href="view_bookings.php" target="adminContent">View Bookings</a> <!-- spelling corrected -->
   <a href="manage_rides.php" target="adminContent">Manage Rides</a>
   <a href="view_rides_admin.php" target="adminContent">View All Rides</a>
   <a href="logout.php">Logout</a>
@@ -94,7 +88,7 @@ if (!isset($_SESSION['admin'])) {
 
 <div class="content">
   <div class="card">
-    <iframe name="adminContent" src="admin_dashboard.php"></iframe>
+    <iframe name="adminContent" src="dashboard.php"></iframe> <!-- HERE: changed from admin_dashboard.php to dashboard.php -->
   </div>
 </div>
 
