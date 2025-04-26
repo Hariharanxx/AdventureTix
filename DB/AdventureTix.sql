@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 24, 2025 at 07:06 PM
+-- Generation Time: Apr 26, 2025 at 01:37 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -38,7 +38,8 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`id`, `username`, `password`) VALUES
-(1, 'priya', '$2y$10$77wouSxyI1XP0/Q0OREbHO0b4YMCPhFpC55FaJg3X8bBxqatBTm..');
+(1, 'priya', '$2y$10$77wouSxyI1XP0/Q0OREbHO0b4YMCPhFpC55FaJg3X8bBxqatBTm..'),
+(2, 'abi', '$2y$10$dY8puLTBBDyI4sCW55b.Le6W85PSzyBrCXOQNyNhFZ3RerXUlhzqe');
 
 -- --------------------------------------------------------
 
@@ -60,7 +61,30 @@ CREATE TABLE `bookings` (
 --
 
 INSERT INTO `bookings` (`id`, `ride`, `date`, `time`, `tickets`, `amount`) VALUES
-(5, '???? The Sky Fury - ₹500', '2025-04-24', '22:33:00', 2, 1000.00);
+(12, 'Storm Surge', '2025-04-26', '19:49:00', 1, 400.00);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `rides`
+--
+
+CREATE TABLE `rides` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `price` decimal(10,2) NOT NULL,
+  `description` text NOT NULL,
+  `image` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `rides`
+--
+
+INSERT INTO `rides` (`id`, `name`, `price`, `description`, `image`) VALUES
+(6, 'The Sky Fury', 500.00, 'Feel the adrenaline rush with our fastest roller coaster yet!', 'roller.jpg'),
+(7, 'The Golden Wheel', 200.00, 'A breathtaking view from the top awaits you!', 'ferriswheel2.jpg'),
+(8, 'Storm Surge', 400.00, 'Dive into the wildest water adventure of your life!', 'WaterSlide.jpg');
 
 -- --------------------------------------------------------
 
@@ -82,12 +106,6 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `phone`, `password`, `created_at`) VALUES
-(1, 'Hariharan', 'hariharanperumal01@gmail.com', '8610154306', '$2y$10$I8dnaiGn9WRN85VjaQzb7uEaZzj7PA2a5pJjDz5z41O8D6lgVXhVW', '2025-03-09 13:42:12'),
-(2, 'Hari2', 'hariharanperumal02@gmail.com', '8608280224', '$2y$10$SIRHT7iYP5qqmPk7Xy6AZOkIMtP6nRjCT4AU8DbH0xYF.ojXjrZN.', '2025-03-09 13:44:13'),
-(3, 'hari2', 'hariharanperumal03@gmail.com', '8610154306', '$2y$10$C4kIjLN.WzQR7zCcMTlX1.LU8rb/Nt2IDtSBzSHobdhOd8rjwLHIy', '2025-03-09 15:35:39'),
-(4, 'Hariharan01', 'hari2@gmail.com', '9876543321', '$2y$10$V9j6vJyoqpJnRSYgsaQ/AeHnjhoyC6Gv.vm/plR81wS.e5roYXKNW', '2025-03-23 04:42:45'),
-(5, 'Hariharan2', 'hari00@gmail.com', '8608280224', '$2y$10$vfePaYgU6jyFyr3FgOXeOuAIWtGm9IGvhRhPxVb94fQn5IxMoB3zi', '2025-03-24 14:22:55'),
-(6, 'hari3', 'hari3@gmail.com', '9090909090', '$2y$10$uxog2WiZkyju9f3wtqdWceb5Qxzz2J9DdurIvdoVMKtIWgkdrIK8e', '2025-04-06 07:28:05'),
 (7, 'priya', 'priya@gmail.com', '8610154306', '$2y$10$64/uv2J1TGNQDVTcTWFACuCWxwNgT0MygmsTazsxrJpqailMgyMPy', '2025-04-23 15:16:17');
 
 --
@@ -107,6 +125,12 @@ ALTER TABLE `bookings`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `rides`
+--
+ALTER TABLE `rides`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -121,19 +145,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `admins`
 --
 ALTER TABLE `admins`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `bookings`
 --
 ALTER TABLE `bookings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `rides`
+--
+ALTER TABLE `rides`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

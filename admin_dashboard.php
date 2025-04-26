@@ -69,7 +69,6 @@ $bookings = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <body>
 
 <div class="container">
-  <a href="logout.php" class="logout">Logout</a>
   <h2>Admin Dashboard</h2>
 
   <?php if (count($bookings) > 0): ?>

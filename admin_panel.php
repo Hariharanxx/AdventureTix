@@ -87,6 +87,8 @@ if (!isset($_SESSION['admin'])) {
 <div class="sidebar">
   <a href="admin_dashboard.php" target="adminContent">Dashboard</a>
   <a href="view_users.php" target="adminContent">View Users</a>
+  <a href="manage_rides.php" target="adminContent">Manage Rides</a>
+  <a href="view_rides_admin.php" target="adminContent">View All Rides</a>
   <a href="logout.php">Logout</a>
 </div>
 

@@ -135,3 +135,23 @@ footer {
     background: #000428;
     padding: 15px;
 }
+  .book-now-btn {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+  }
+
+  .book-now-btn:hover {
+    background: linear-gradient(to right, #feb47b, #ff7e5f);
+    transform: scale(1.1);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
